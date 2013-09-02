@@ -1,0 +1,137 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="utf-8"> 
+<title>Appointment Submission</title> 
+<meta name="description" content="Twitter Bootstrap Version2.0 horizontal form layout example from w3resource.com."> 
+<link href="twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet">
+<link href="twitter-bootstrap-v2/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+</head>
+<body>
+<div class = "container">
+  <div id="example" class="modal hide fade in" style="display: none; ">
+    <div class="modal-header">
+      <a class="close" data-dismiss="modal">×</a>
+      <h3>Appointment Submission</h3>
+    </div>
+    <div class="modal-body">
+      <h4>Review your details</h4>
+      <p>Are you sure you want to goahed with your appointment.</p>            
+    </div>
+    <div class="modal-footer">
+      <a href="success.html" class="btn btn-success">Yes</a>
+      <a href="#" class="btn" data-dismiss="modal">No</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span6">
+     <form class="form-horizontal" action="success.html">
+          <fieldset>
+          <legend>Appointment Submission</legend>
+          <h4>All fields are mandatory</h4>
+          <br/>
+          <div class="control-group">
+            <label class="control-label" for="input01">Name</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="input01">
+              <p class="help-block man01 hidden">Please enter your name.</p>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="optionsGender">Gender</label>
+            <div class="controls btn-group" data-toggle="buttons-radio">
+              <button type="button" class="btn btn-primary">Male</button>
+              <button type="button" class="btn btn-primary">Female</button>
+            </div>
+            <input type="hidden" id="buttonvalue"/>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="select01">Age</label>
+            <div class="controls">
+              <select id="select01">
+                <option></option>
+                <option>0-20</option>
+                <option>20-30</option>
+                <option>30-40</option>
+                <option>40-60</option>
+                <option>Above60</option>
+              </select>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="input02">E-mail</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="input02">
+              <p class="help-block man02 hidden">Please enter your e-mail.</p>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="input02">Appointment Date</label>
+            <div class="controls input-append date" id="dp3" data-date-format="dd-mm-yyyy">
+                        <input class="span2" size="16"  id="ad" type="text" class="datepicker">
+                        <span class="add-on"><i class="icon-th"></i></span><br/><br/>
+                        <p class="help-block man03 hidden">Please enter appointment date.</p>
+                    </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="textarea">Remarks</label>
+            <div class="controls">
+              <textarea class="input-xlarge" id="textarea" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <!-- <button type="submit" class="btn btn-primary save">Save changes</button> -->
+            <a data-toggle="modal" href="#example" class="btn btn-primary save">Save</a>
+            <a class="btn cancel">cancel</a>
+          </div>
+        </fieldset>
+  </form>
+ </div>
+</div>
+
+  
+</div>
+    <script src="twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript">
+      $(function(){ 
+          $(".btn-group button").click(function () {
+          $("#buttonvalue").val($(this).text());
+        });
+        $('#dp3').datepicker();
+        $('.save').click(function () { 
+            if($("#input01").val()===''){
+              $("#input01").parents('div.control-group').addClass("error");
+              $(".help-block.man01").removeClass("hidden");
+              return false;
+            }else{
+              $("#input01").parents('div.control-group').removeClass("error");
+              $(".help-block.man01").addClass("hidden");
+            }
+            if($("#input02").val()===''){
+              $("#input02").parents('div.control-group').addClass("error");
+              $(".help-block.man02").removeClass("hidden");
+              return false;
+            }else{
+              $("#input02").parents('div.control-group').removeClass("error");
+              $(".help-block.man02").addClass("hidden");
+            }
+            if($("#ad").val()===''){
+              $("#ad").parents('div.control-group').addClass("error");
+              $(".help-block.man03").removeClass("hidden");
+              return false;
+            }else{
+              $("#ad").parents('div.control-group').removeClass("error");
+              $(".help-block.man03").addClass("hidden");
+            }
+            
+          });
+        $('.cancel').click(function () { 
+            window.location="sankaranethralaya.html";
+         });
+    });
+  </script>
+</body>
+</html>
+            

@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <title>Chennai hospitals</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="description" content="List of hospitals in chennai!">
+	     <!-- Le styles -->
+	    <link href="/bootstrap.css" rel="stylesheet">
+	    <link href="twitter-bootstrap-v2/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+	    <style type="text/css">
+	    .specialities{
+	    	display: block;
+			width: 300px;
+			height:300px;
+			margin: 1em auto;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			-webkit-border-radius: 99em;
+			-moz-border-radius: 99em;
+			border-radius: 99em;
+			border: 2px solid #eee;
+			box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3); 
+			cursor: pointer;
+  	     }
+  	     .socials {
+			padding: 10px;
+		}
+	    </style>
+	</head>
+	<body>
+			<!--<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>-->
+		<div class="container">
+			<h1>Bootstrap Site</h1>
+			<div class="navbar">
+	              <div class="navbar-inner">
+	                <div class="container">
+	                  <ul class="nav">
+	                    <li class="active"><a href="#">Home</a></li>
+	                  </ul>
+	                 <!-- <ul class="nav pull-right">
+						  <li class="dropdown">
+						    <a href="#"
+						          class="dropdown-toggle"
+						          data-toggle="dropdown">
+						          Social
+						          <b class="caret"></b>
+						    </a>
+						    <ul class="dropdown-menu">
+						     	<li class="socials"> --><!-- Place this tag where you want the +1 button to render -->
+								<!--	<g:plusone annotation="inline" width="150"></g:plusone>
+								</li>
+						  		<li class="socials"><div class="fb-like" data-send="false" data-width="150" data-show-faces="true"></div></li>
+						  		<li class="socials"><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+								<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
+						    </ul>
+						  </li>
+						</ul> -->
+
+	                </div>
+	              </div>
+	            </div>
+			<div class="hero-unit">
+	  		
+	    		<p>Welocme to the chennai's all in one search page for your health problems.</p>
+	 			<h4>Click on the image below to navigate to the specialists!</h4>
+	    		
+	 		</div>
+	 		<div class="row">
+	 			<div class="span4 specialities" id="opticians" style="background-image: 
+	       			url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZrLg1HkffAyaBElmKn3Cm3NpRbJpapE0LnT-5yZRZ4xCmUGhz')">
+	 			</div>
+	 			<div class="span4 specialities" id="dentists" style="background-image: 
+	       			url('https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTpLNG0OPwXn2KSMXBa46RgqXBhZP0uLZ6W-cMrXyiWR9TSltCokA')">
+	 			</div>
+	 			<div class="span4 specialities" id="pediatrics" style="background-image: 
+	       			url('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR6epHwWeEkeOCojOo9aQHPiq2uFUzCnPlNVoDifkYJbUuOjMNS3w')">
+	 			</div>
+	 		</div>
+      </div>
+		
+	<script src="twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap.js"></script>
+    <script type="text/javascript">
+			
+		$(function(){	
+			$('.specialities').click(function () { 
+				var selected_id = $(this).attr('id');
+				window.location=selected_id+".html";
+  			 }
+            );
+
+             /*var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    		po.src = 'https://apis.google.com/js/plusone.js';
+    		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);*/
+
+		});
+    </script>
+	</body>
+</html>

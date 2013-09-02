@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <title>Chennai opticians</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="description" content="List of hospitals in chennai!">
+	     <!-- Le styles -->
+	    <link href="twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet">
+	    <link href="twitter-bootstrap-v2/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+	    <style type="text/css">
+	    .select{
+	    	cursor: pointer;
+	    	width: 300px;
+			height:300px;
+			margin: 1em auto;
+			border: 2px solid #eee;
+			
+	    	}
+	    </style>
+	</head>
+	<body>
+		<div class="container">
+        	<div class="row">
+        		<div class="span6 offset3">
+          			<h2>Well known opticians!</h2>
+		  			<p>Click on them to see more details</p>
+          				<div id="myCarousel" class="carousel slide">
+          					<!-- Carousel items -->
+		  					<div class="carousel-inner">
+						    	<div class="item active select" id="1"><img src="images/opticians/sankaranethralaya.jpg" alt="sn logo" width="500" height="99" />
+						    		<div class="carousel-caption">
+                             			<h4>SanKara Nethralaya</h4>
+                            			<p>It was in 1976 when addressing a group of doctors, His Holiness Sri Jayendra Saraswathi, the Sankaracharya of the Kanchi Kamakoti Peetam spoke of the need to create a hospital with a missionary spirit.</p>
+                        			</div>
+                        		</div>
+						    	<div class="item select" id="2"><img src="images/opticians/agarwal.jpg" alt="aw logo" width="500" height="99" />
+						    		<div class="carousel-caption">
+                             			<h4>Agarwal</h4>
+                            			<p>Bringing advanced internationally approved eye care services to your doorstep Dr. Agarwal's Eye Hospital is listed as A Major Eye Centre of the World by The International Congress of Ophthalmology The Hospital, after notching up an impressive success in TamilNadu, Andhra Pradesh and Rajasthan</p>
+                        			</div>
+						    	</div>
+						    	<div class="item select" id="3"><img src="images/opticians/vasan.jpg" alt="vs logo" width="500" height="99" />
+						    		<div class="carousel-caption">
+                             			<h4>Vasan</h4>
+                            			<p>Vasan Healthcare Group - the flagship company is working towards building the vasan brand to be the world's largest day care service provider. In this endeavour to bring quality healthcare to each and every citizen.</p>
+                        			</div>
+						    	</div>
+							</div>
+  							<!-- Carousel nav -->
+  							<a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+  							<a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+						</div>
+				</div>
+				<div class="row">
+					<div class="span6">
+						<div class="accordion" id="accordion2">
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+				                  Who are these ?.
+				                </a>
+				              </div>
+				              <div id="collapseOne" class="accordion-body collapse" style="height: 0px; ">
+				                <div class="accordion-inner">
+				                  They are the top 3 opticians in chennai!
+				                </div>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+				                 What should i do ?.
+				                </a>
+				              </div>
+				              <div id="collapseTwo" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  Click on one of the specialist to view more details!
+				                </div>
+				              </div>
+				            </div>
+				         </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	<script src="twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-carousel.js"></script>
+    <script type="text/javascript" src="twitter-bootstrap-v2/docs/assets/js/bootstrap-collapse.js"></script>
+    <script type="text/javascript">
+			
+		$(function(){	
+		
+			$('.carousel').carousel({
+  				interval: 3000 // in milliseconds
+			});
+			$('.item').click(function () { 
+				var selected_id = $(this).attr('id');
+				var target_url = "sankaranethralaya.html";
+				if(selected_id == 2){
+					target_url = "agarwal.html";
+				}
+				if(selected_id == 3){
+					target_url = "vasan.html"
+				}
+				window.location=target_url;
+  			 }
+            );
+		});
+    </script>
+	</body>
+</html>
